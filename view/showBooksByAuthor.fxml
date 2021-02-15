@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="controller.ShowBooksByAuthorController" alignment="CENTER" spacing="10">
+
+    <Label text="Authors:"/>
+    <ListView fx:id="authorListView" maxHeight="140" items="${controller.listOfAuthors}"/>
+
+    <Button text="Display" onAction="#displayBooksByAuthor"/>
+
+    <Label text="Books by Selected Author:"/>
+    <ListView maxHeight="140" items="${controller.listOfBooksByAuthors}"/>
+
+    <Button text="Close" onAction="#closeWindow"/>
+
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+</VBox>

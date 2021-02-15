@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+<?import java.net.URL?>
+<?import javafx.scene.image.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.LibraryController"
+      alignment="center"
+      styleClass="root"
+>
+    <HBox xmlns:fx="http://javafx.com/fxml"
+          alignment="center" spacing="10"
+          styleClass="root, header">
+
+        <ImageView fitHeight="50" fitWidth="160">
+            <Image url="@UTS.png"/>
+        </ImageView>
+
+        <Label text="Library System" styleClass="h1"/>
+    </HBox>
+
+    <VBox xmlns:fx="http://javafx.com/fxml"
+          alignment="center" spacing="20"
+          styleClass="footer">
+
+        <Button text="Explore Catalogue" styleClass="button" onAction="#showCatalogue"/>
+        <Button text="Patron Record" styleClass="button" onAction="#showPatronRecord"/>
+        <Button text="Favourite Books" styleClass="button" onAction="#showFavouriteBooks"/>
+        <Button text="Administration Mode" styleClass="button" onAction="#showAdmin"/>
+        <Button text="Exit" styleClass="button" fx:id="exit" onAction="#exit"/>
+
+    </VBox>
+
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+</VBox>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="controller.ShowAvailableBooksController" alignment="CENTER" spacing="10">
+
+    <TableView fx:id="booksTableView" maxHeight="350" items="${controller.listOfBooks}">
+        <placeholder><Label text="No Books in Catalogue"/></placeholder>
+        <columns >
+            <TableColumn text="Title" minWidth="100" maxWidth="100">
+                <cellValueFactory><PropertyValueFactory property="Title"/></cellValueFactory>
+            </TableColumn>
+
+            <TableColumn text="Author" minWidth="100" maxWidth="100">
+                <cellValueFactory><PropertyValueFactory property="Author"/></cellValueFactory>
+            </TableColumn>
+
+            <TableColumn text="Genre" minWidth="100" maxWidth="100">
+                <cellValueFactory><PropertyValueFactory property="Genre"/></cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+
+    <Button text="Close" onAction="#closeWindow"/>
+
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+</VBox>
